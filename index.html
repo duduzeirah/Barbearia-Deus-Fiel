@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freestyle Barber | Arte e Estilo Urbano</title>
+    <title>Barbearia Deus é Fiel | Arte e Estilo Urbano</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -54,14 +54,20 @@
     <!-- Header / Nav -->
     <nav class="fixed w-full z-50 bg-darkest/90 backdrop-blur-xl border-b border-white/5">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <span class="font-display text-lg font-bold tracking-tighter text-white">FS<span class="text-neon">.</span>BARBER</span>
+            <!-- LOGO NO HEADER -->
+            <a href="#" class="flex items-center gap-3">
+                <!-- Se tiveres um ficheiro de imagem, substitui o <img> abaixo -->
+                <!-- <img src="/images/logobarbeariadeusefiel.ext" alt="Logo Barbearia Deus é Fiel" class="h-12 w-auto"> -->
+                <span class="font-display text-lg font-bold tracking-tighter text-white uppercase">Deus é Fiel<span class="text-neon">.</span></span>
+            </a>
+            
             <div class="hidden md:flex gap-8 text-[10px] uppercase font-bold tracking-[0.3em]">
                 <a href="#art" class="hover:text-neon transition-colors">Arte</a>
                 <a href="#prices" class="hover:text-neon transition-colors">Menu</a>
                 <a href="#location" class="hover:text-neon transition-colors">Base</a>
             </div>
             <a href="https://wa.me/5562991879022" target="_blank" class="bg-neon text-darkest font-extrabold text-[10px] tracking-widest px-6 py-3 rounded-full hover:scale-105 transition-transform uppercase">
-                Drop um horário
+                Marcar horário
             </a>
         </div>
     </nav>
@@ -76,8 +82,8 @@
             <div class="inline-block px-3 py-1 border border-neon/30 rounded-full mb-6">
                 <span class="text-neon text-[10px] font-bold tracking-[0.4em] uppercase">The New Standard</span>
             </div>
-            <h1 class="text-6xl md:text-8xl font-display font-bold text-white mb-6 leading-none tracking-tighter uppercase">
-                Não é corte.<br><span class="text-neon text-glow italic">É Arte.</span>
+            <h1 class="text-5xl md:text-8xl font-display font-bold text-white mb-6 leading-none tracking-tighter uppercase">
+                Deus é Fiel<br><span class="text-neon text-glow italic text-4xl md:text-6xl">Estilo & Fé.</span>
             </h1>
             <p class="max-w-xl mx-auto text-gray-400 text-lg font-medium leading-relaxed mb-12">
                 Especialistas em <span class="text-white">Freestyle</span>, degradês técnicos e visuais de alta performance para quem não aceita o básico.
@@ -104,7 +110,6 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <!-- Grid de Fotos com proporções variadas -->
             <div class="md:col-span-2 h-[500px] overflow-hidden rounded-3xl freestyle-border group">
                 <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="[Corte com freestyle detalhado]">
                 <div class="absolute inset-0 bg-gradient-to-t from-darkest via-transparent to-transparent opacity-80"></div>
@@ -113,10 +118,10 @@
                     <p class="text-white font-display text-2xl uppercase">High Fade + Line</p>
                 </div>
             </div>
-            <div class="h-[500px] overflow-hidden rounded-3xl freestyle-border group">
+            <div class="h-[500px] overflow-hidden rounded-3xl freestyle-border group relative">
                 <img src="https://images.unsplash.com/photo-1599351431247-f10b21817021?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="[Detalhe de risco no cabelo]">
             </div>
-            <div class="h-[500px] overflow-hidden rounded-3xl freestyle-border group">
+            <div class="h-[500px] overflow-hidden rounded-3xl freestyle-border group relative">
                 <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="[Corte degradê moderno]">
             </div>
         </div>
@@ -125,7 +130,7 @@
     <!-- Services / Investimento -->
     <section id="prices" class="py-32 bg-surface border-y border-white/5">
         <div class="max-w-4xl mx-auto px-6">
-            <h3 class="font-display text-3xl text-center text-white mb-20 uppercase tracking-tighter">O Menu</h3>
+            <h3 class="font-display text-3xl text-center text-white mb-20 uppercase tracking-tighter italic">O Menu <span class="text-neon">Premium</span></h3>
             
             <div class="space-y-12">
                 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 group">
@@ -188,7 +193,6 @@
                 </a>
             </div>
             
-            <!-- Representação de Mapa ou Imagem da Unidade -->
             <div class="lg:w-1/2 w-full h-[500px] rounded-3xl overflow-hidden border border-white/10 relative">
                  <img src="https://images.unsplash.com/photo-1512690118294-704331273f1f?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover grayscale brightness-50" alt="[Foto interna da barbearia com luzes neon]">
                  <div class="absolute inset-0 flex items-center justify-center">
@@ -204,13 +208,18 @@
     <!-- Footer -->
     <footer class="py-20 border-t border-white/5 text-center">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="font-display text-white text-3xl tracking-tighter mb-8">FS<span class="text-neon">.</span>BARBER</h2>
+            <!-- LOGO NO FOOTER -->
+            <div class="mb-8 flex justify-center">
+                <!-- <img src="URL_DA_TUA_LOGO" alt="Logo Barbearia Deus é Fiel" class="h-16 w-auto"> -->
+                <h2 class="font-display text-white text-2xl tracking-tighter uppercase">Barbearia Deus é Fiel</h2>
+            </div>
+            
             <div class="flex justify-center gap-10 mb-12 text-gray-400 text-xl">
                 <a href="#" class="hover:text-neon transition-colors"><i class="fab fa-instagram"></i></a>
                 <a href="#" class="hover:text-neon transition-colors"><i class="fab fa-tiktok"></i></a>
                 <a href="https://wa.me/5562991879022" class="hover:text-neon transition-colors"><i class="fab fa-whatsapp"></i></a>
             </div>
-            <p class="text-[10px] text-gray-700 uppercase tracking-[1em] mb-4">Crafting Style Since 2024</p>
+            <p class="text-[10px] text-gray-700 uppercase tracking-[1em] mb-4">Estilo & Fé Since 2024</p>
             <p class="text-[9px] text-gray-800 uppercase tracking-widest">Goiânia — GO | Brasil</p>
         </div>
     </footer>
