@@ -3,378 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia Premium | Estilo e Tradição</title>
+    <title>Freestyle Barber | Arte e Estilo Urbano</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Font Awesome para Ícones -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        gold: '#D4AF37',
-                        goldhover: '#B5952F',
-                        darkbg: '#121212',
-                        cardbg: '#1E1E1E'
+                        neon: '#00FFD1', // Ciano Neon para ar moderno
+                        darkest: '#050505',
+                        surface: '#121212',
                     },
                     fontFamily: {
-                        sans: ['Roboto', 'sans-serif'],
-                        display: ['Oswald', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Syncopate', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    
     <style>
-        /* Efeito suave no scroll */
-        html {
-            scroll-behavior: smooth;
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 255, 209, 0.5);
         }
-        
-        /* Classe para placeholder de imagem */
-        .img-placeholder {
-            background-color: #2D2D2D;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            flex-direction: column;
-            border: 2px dashed #444;
-            transition: all 0.3s ease;
+        .bg-grid {
+            background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px);
+            background-size: 30px 30px;
         }
-        
-        .img-placeholder:hover {
-            border-color: #D4AF37;
-            color: #D4AF37;
+        .freestyle-border {
+            border: 1px solid rgba(0, 255, 209, 0.2);
+            transition: all 0.4s ease;
         }
-
-        /* Botão flutuante do WhatsApp no Mobile */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s;
-            text-decoration: none;
-        }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #1ebc57;
+        .freestyle-border:hover {
+            border-color: #00FFD1;
+            box-shadow: 0 0 20px rgba(0, 255, 209, 0.1);
         }
     </style>
 </head>
-<body class="bg-darkbg text-gray-200 font-sans antialiased">
+<body class="bg-darkest text-gray-200 font-sans antialiased bg-grid">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-darkbg/95 backdrop-blur-sm border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
-                <!-- Logo Area -->
-                <div class="flex-shrink-0 cursor-pointer">
-                    <!-- <img src="/images/logobarabeariadeusefiel.ext"> -->
-                    <div class="text-gold font-display font-bold text-2xl tracking-wider border-2 border-gold p-2">
-                        LOGO DA BARBEARIA
-                    </div>
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#inicio" class="hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Início</a>
-                        <a href="#sobre" class="hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">A Barbearia</a>
-                        <a href="#servicos" class="hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-colors">Serviços</a>
-                        <a href="#contato" class="bg-gold text-darkbg hover:bg-goldhover px-5 py-2 rounded-md font-bold transition-colors">
-                            Agendar Agora
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="-mr-2 flex md:hidden">
-                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 bg-darkest/90 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <span class="font-display text-lg font-bold tracking-tighter text-white">FS<span class="text-neon">.</span>BARBER</span>
+            <div class="hidden md:flex gap-8 text-[10px] uppercase font-bold tracking-[0.3em]">
+                <a href="#art" class="hover:text-neon transition-colors">Arte</a>
+                <a href="#prices" class="hover:text-neon transition-colors">Menu</a>
+                <a href="#location" class="hover:text-neon transition-colors">Base</a>
             </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="hidden md:hidden bg-cardbg border-b border-gray-700" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#inicio" class="hover:text-gold block px-3 py-2 rounded-md text-base font-medium">Início</a>
-                <a href="#sobre" class="hover:text-gold block px-3 py-2 rounded-md text-base font-medium">A Barbearia</a>
-                <a href="#servicos" class="hover:text-gold block px-3 py-2 rounded-md text-base font-medium">Serviços</a>
-                <a href="https://wa.me/5562991879022?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="text-gold block px-3 py-2 rounded-md text-base font-bold">Agendar Horário</a>
-            </div>
+            <a href="https://wa.me/5562991879022" target="_blank" class="bg-neon text-darkest font-extrabold text-[10px] tracking-widest px-6 py-3 rounded-full hover:scale-105 transition-transform uppercase">
+                Drop um horário
+            </a>
         </div>
     </nav>
 
-    <!-- Hero Section (Capa) -->
-    <section id="inicio" class="relative h-screen flex items-center justify-center">
-        <!-- SUBSTITUIR: Imagem de Fundo (Background) -->
-        <!-- Dica: Use uma foto escura do interior da barbearia -->
-        <div class="absolute inset-0 z-0">
-            <div class="w-full h-full bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
-            <!-- Overlay escuro para melhorar leitura -->
-            <div class="absolute inset-0 bg-black opacity-70"></div>
+    <!-- Hero: Impacto Urbano -->
+    <section class="relative h-screen flex items-center justify-center pt-20">
+        <div class="absolute inset-0 grayscale opacity-40">
+            <img src="https://images.unsplash.com/photo-1590540179852-211d6b45e631?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover" alt="[Imagem de barbearia moderna com luzes neon]">
         </div>
-
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16">
-            <p class="text-gold font-display tracking-widest uppercase mb-4 text-sm md:text-base animate-pulse">Estilo • Tradição • Confiança</p>
-            <h1 class="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight">
-                Seu Visual,<br>Nossa Assinatura.
+        
+        <div class="relative z-10 text-center px-6">
+            <div class="inline-block px-3 py-1 border border-neon/30 rounded-full mb-6">
+                <span class="text-neon text-[10px] font-bold tracking-[0.4em] uppercase">The New Standard</span>
+            </div>
+            <h1 class="text-6xl md:text-8xl font-display font-bold text-white mb-6 leading-none tracking-tighter uppercase">
+                Não é corte.<br><span class="text-neon text-glow italic">É Arte.</span>
             </h1>
-            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-                Mais do que um corte de cabelo, proporcionamos uma experiência de cuidado masculino em um ambiente exclusivo.
+            <p class="max-w-xl mx-auto text-gray-400 text-lg font-medium leading-relaxed mb-12">
+                Especialistas em <span class="text-white">Freestyle</span>, degradês técnicos e visuais de alta performance para quem não aceita o básico.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/5562991879022?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" class="bg-gold text-darkbg font-bold py-4 px-8 rounded hover:bg-goldhover transition-all transform hover:scale-105 shadow-lg shadow-gold/20 flex items-center justify-center gap-2">
-                    <i class="fab fa-whatsapp text-xl"></i>
-                    AGENDAR HORÁRIO
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="https://wa.me/5562991879022" class="w-full md:w-auto bg-white text-darkest font-black py-5 px-10 rounded-xl hover:bg-neon transition-all uppercase tracking-widest text-xs">
+                    Agendar via WhatsApp
                 </a>
-                <a href="#servicos" class="border border-white text-white font-bold py-4 px-8 rounded hover:bg-white hover:text-darkbg transition-all flex items-center justify-center">
-                    VER PREÇOS
+                <a href="#art" class="text-white font-bold text-xs uppercase tracking-widest flex items-center gap-2 group">
+                    Explorar Galeria <i class="fas fa-arrow-down group-hover:translate-y-1 transition-transform text-neon"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Confiança/Diferenciais -->
-    <section class="py-20 bg-darkbg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 bg-cardbg rounded-lg border border-gray-800 hover:border-gold transition-colors duration-300">
-                    <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 text-gold text-2xl">
-                        <i class="fas fa-cut"></i>
-                    </div>
-                    <h3 class="text-xl font-display font-bold text-white mb-2">Profissionais Experientes</h3>
-                    <p class="text-gray-400">Barbeiros qualificados prontos para entregar o corte perfeito para o seu rosto.</p>
+    <!-- Galeria Freestyle -->
+    <section id="art" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+            <div class="max-w-xl">
+                <h3 class="font-display text-4xl text-white uppercase mb-4 leading-none">Domínio Técnico <br>& <span class="text-neon">Criatividade</span></h3>
+                <p class="text-gray-500 font-medium tracking-tight">Do risco minimalista ao design complexo. Se você consegue imaginar, nós conseguimos riscar.</p>
+            </div>
+            <span class="text-neon font-display text-6xl opacity-10 hidden md:block">FREESTYLE</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <!-- Grid de Fotos com proporções variadas -->
+            <div class="md:col-span-2 h-[500px] overflow-hidden rounded-3xl freestyle-border group">
+                <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="[Corte com freestyle detalhado]">
+                <div class="absolute inset-0 bg-gradient-to-t from-darkest via-transparent to-transparent opacity-80"></div>
+                <div class="absolute bottom-8 left-8">
+                    <p class="text-neon font-bold text-xs tracking-widest mb-1">SIGNATURE LOOK</p>
+                    <p class="text-white font-display text-2xl uppercase">High Fade + Line</p>
                 </div>
-                <div class="p-6 bg-cardbg rounded-lg border border-gray-800 hover:border-gold transition-colors duration-300">
-                    <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 text-gold text-2xl">
-                        <i class="fas fa-beer"></i>
+            </div>
+            <div class="h-[500px] overflow-hidden rounded-3xl freestyle-border group">
+                <img src="https://images.unsplash.com/photo-1599351431247-f10b21817021?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="[Detalhe de risco no cabelo]">
+            </div>
+            <div class="h-[500px] overflow-hidden rounded-3xl freestyle-border group">
+                <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="[Corte degradê moderno]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Investimento -->
+    <section id="prices" class="py-32 bg-surface border-y border-white/5">
+        <div class="max-w-4xl mx-auto px-6">
+            <h3 class="font-display text-3xl text-center text-white mb-20 uppercase tracking-tighter">O Menu</h3>
+            
+            <div class="space-y-12">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 group">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-4">
+                            <h5 class="text-white font-display text-xl uppercase group-hover:text-neon transition-colors">Freestyle Master</h5>
+                            <span class="px-2 py-0.5 bg-neon text-darkest text-[10px] font-black rounded uppercase">Top 1</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mt-2">Corte completo + Design Freestyle exclusivo (riscos, desenhos ou texturas).</p>
                     </div>
-                    <h3 class="text-xl font-display font-bold text-white mb-2">Ambiente Exclusivo</h3>
-                    <p class="text-gray-400">Relaxe, tome uma bebida gelada e aproveite o ambiente climatizado enquanto espera.</p>
+                    <span class="text-white font-display text-3xl">R$ 90</span>
                 </div>
-                <div class="p-6 bg-cardbg rounded-lg border border-gray-800 hover:border-gold transition-colors duration-300">
-                    <div class="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-4 text-gold text-2xl">
-                        <i class="fas fa-clock"></i>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 group">
+                    <div class="flex-1 border-t border-white/5 pt-12 md:border-t-0 md:pt-0">
+                        <h5 class="text-white font-display text-xl uppercase group-hover:text-neon transition-colors">Urban Fade</h5>
+                        <p class="text-gray-500 text-sm mt-2">Degradê de alta precisão (Skin Fade, Mid ou Taper) sem freestyle.</p>
                     </div>
-                    <h3 class="text-xl font-display font-bold text-white mb-2">Pontualidade</h3>
-                    <p class="text-gray-400">Respeitamos seu tempo. Agendamento preciso para você não ficar esperando.</p>
+                    <span class="text-white font-display text-3xl">R$ 70</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 group border-t border-white/5 pt-12">
+                    <div class="flex-1">
+                        <h5 class="text-white font-display text-xl uppercase group-hover:text-neon transition-colors">The Full Drop</h5>
+                        <p class="text-gray-500 text-sm mt-2">Corte Freestyle + Barba modelada + Sobrancelha.</p>
+                    </div>
+                    <span class="text-white font-display text-3xl">R$ 140</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre & Imagem Principal -->
-    <section id="sobre" class="py-20 bg-cardbg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <!-- Espaço para Foto da Equipe ou Interior -->
-                <div class="w-full md:w-1/2 h-96 img-placeholder rounded-lg relative overflow-hidden group">
-                     <!-- REMOVA ESTA DIV DE TEXTO AO COLOCAR A IMAGEM -->
-                     <div class="text-center p-4">
-                        <i class="fas fa-camera text-4xl mb-2"></i>
-                        <p class="font-bold">ESPAÇO PARA FOTO DO INTERIOR</p>
-                        <p class="text-sm">(Recomendado: 600x400px)</p>
-                     </div>
-                     <!-- Exemplo de como inserir a imagem real: 
-                     <img src="caminho/para/sua/foto.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Interior da Barbearia"> 
-                     -->
-                </div>
-                
-                <div class="w-full md:w-1/2">
-                    <h2 class="text-gold font-display text-sm tracking-widest uppercase mb-2">Quem Somos</h2>
-                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-6">A Melhor Versão de Você Mesmo</h3>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        Fundada com o objetivo de resgatar a cavalheirismo clássico com um toque moderno, nossa barbearia é um refúgio para o homem moderno. Aqui, não vendemos apenas cortes de cabelo, vendemos autoestima e confiança.
-                    </p>
-                    <ul class="space-y-3 mb-8">
-                        <li class="flex items-center text-gray-300">
-                            <i class="fas fa-check text-gold mr-3"></i> Toalha quente e navalha
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <i class="fas fa-check text-gold mr-3"></i> Produtos de alta qualidade
-                        </li>
-                        <li class="flex items-center text-gray-300">
-                            <i class="fas fa-check text-gold mr-3"></i> Higienização rigorosa
-                        </li>
-                    </ul>
-                    <a href="https://wa.me/5562991879022" class="text-gold font-bold hover:text-white transition-colors flex items-center gap-2 group">
-                        CONHECER O ESPAÇO <i class="fas fa-arrow-right transform group-hover:translate-x-2 transition-transform"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Serviços e Preços -->
-    <section id="servicos" class="py-20 bg-darkbg">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-display font-bold text-white">Nossos Serviços</h2>
-                <div class="w-20 h-1 bg-gold mx-auto mt-4"></div>
-            </div>
-
-            <div class="space-y-6">
-                <!-- Item 1 -->
-                <div class="flex items-center justify-between border-b border-gray-800 pb-4 hover:bg-gray-900/50 p-3 rounded transition-colors cursor-default">
-                    <div>
-                        <h4 class="text-xl font-bold text-white">Corte de Cabelo</h4>
-                        <p class="text-gray-500 text-sm">Degradê, Social, Militar ou na Tesoura. Incluso lavagem e finalização.</p>
+    <!-- Local / CTA Final -->
+    <section id="location" class="py-32 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+            <div class="lg:w-1/2">
+                <h3 class="font-display text-5xl text-white uppercase leading-none mb-8">Ready to <br><span class="text-neon">Upgrade?</span></h3>
+                <div class="space-y-8 mb-12">
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 rounded-full border border-neon/30 flex items-center justify-center text-neon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold uppercase tracking-widest text-xs mb-1">Base Goiânia</p>
+                            <p class="text-gray-500">Setor Marista, Rua 9 — Ao lado da conveniência.</p>
+                        </div>
                     </div>
-                    <div class="text-gold font-bold text-xl">R$ --</div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="flex items-center justify-between border-b border-gray-800 pb-4 hover:bg-gray-900/50 p-3 rounded transition-colors cursor-default">
-                    <div>
-                        <h4 class="text-xl font-bold text-white">Barba Terapia</h4>
-                        <p class="text-gray-500 text-sm">Toalha quente, esfoliação e modelagem na navalha.</p>
+                    <div class="flex items-center gap-6">
+                        <div class="w-12 h-12 rounded-full border border-neon/30 flex items-center justify-center text-neon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold uppercase tracking-widest text-xs mb-1">Fast Lane</p>
+                            <p class="text-gray-500">Apenas agendamento para evitar filas.</p>
+                        </div>
                     </div>
-                    <div class="text-gold font-bold text-xl">R$ --</div>
                 </div>
-
-                <!-- Item 3 -->
-                <div class="flex items-center justify-between border-b border-gray-800 pb-4 hover:bg-gray-900/50 p-3 rounded transition-colors cursor-default">
-                    <div>
-                        <h4 class="text-xl font-bold text-white">Cabelo + Barba (Combo)</h4>
-                        <p class="text-gray-500 text-sm">O serviço completo para renovar o visual.</p>
-                    </div>
-                    <div class="text-gold font-bold text-xl">R$ --</div>
-                </div>
-
-                <!-- Item 4 -->
-                <div class="flex items-center justify-between border-b border-gray-800 pb-4 hover:bg-gray-900/50 p-3 rounded transition-colors cursor-default">
-                    <div>
-                        <h4 class="text-xl font-bold text-white">Sobrancelha</h4>
-                        <p class="text-gray-500 text-sm">Alinhamento e limpeza dos fios.</p>
-                    </div>
-                    <div class="text-gold font-bold text-xl">R$ --</div>
-                </div>
+                <a href="https://wa.me/5562991879022" target="_blank" class="block w-full text-center bg-neon text-darkest font-black py-6 rounded-2xl hover:shadow-[0_0_30px_rgba(0,255,209,0.3)] transition-all uppercase tracking-widest text-sm">
+                    Chamar no WhatsApp Agora
+                </a>
             </div>
             
-            <div class="mt-12 text-center">
-                <a href="https://wa.me/5562991879022" class="inline-block bg-transparent border-2 border-gold text-gold font-bold py-3 px-10 rounded hover:bg-gold hover:text-darkbg transition-all">
-                    CONSULTAR DISPONIBILIDADE
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galeria de Trabalhos -->
-    <section class="py-20 bg-cardbg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-display font-bold text-white mb-10 text-center">Galeria de Resultados</h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <!-- Placeholder 1 -->
-                <div class="aspect-square img-placeholder rounded-lg">
-                    <i class="fas fa-image text-3xl mb-2"></i>
-                    <span class="text-xs">FOTO CORTE 1</span>
-                </div>
-                <!-- Placeholder 2 -->
-                <div class="aspect-square img-placeholder rounded-lg">
-                    <i class="fas fa-image text-3xl mb-2"></i>
-                    <span class="text-xs">FOTO CORTE 2</span>
-                </div>
-                <!-- Placeholder 3 -->
-                <div class="aspect-square img-placeholder rounded-lg">
-                    <i class="fas fa-image text-3xl mb-2"></i>
-                    <span class="text-xs">FOTO BARBA 1</span>
-                </div>
-                <!-- Placeholder 4 -->
-                <div class="aspect-square img-placeholder rounded-lg">
-                    <i class="fas fa-image text-3xl mb-2"></i>
-                    <span class="text-xs">FOTO AMBIENTE</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Localização e Contato -->
-    <section id="contato" class="py-20 bg-darkbg border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="text-3xl font-display font-bold text-white mb-6">Onde Estamos</h2>
-                    <p class="text-gray-400 mb-8">Venha nos fazer uma visita. Estacionamento fácil e café sempre fresco.</p>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-gold mt-1 mr-4 w-6 text-center"></i>
-                            <div>
-                                <h4 class="text-white font-bold">Endereço</h4>
-                                <p class="text-gray-500">Rua Exemplo, 123 - Setor Central<br>Goiânia - GO</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <i class="fab fa-whatsapp text-gold mt-1 mr-4 w-6 text-center"></i>
-                            <div>
-                                <h4 class="text-white font-bold">WhatsApp</h4>
-                                <a href="https://wa.me/5562991879022" class="text-gray-500 hover:text-gold transition-colors">(62) 99187-9022</a>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <i class="far fa-clock text-gold mt-1 mr-4 w-6 text-center"></i>
-                            <div>
-                                <h4 class="text-white font-bold">Horário de Funcionamento</h4>
-                                <p class="text-gray-500">Seg - Sex: 09:00 - 20:00<br>Sáb: 09:00 - 18:00</p>
-                            </div>
-                        </div>
+            <!-- Representação de Mapa ou Imagem da Unidade -->
+            <div class="lg:w-1/2 w-full h-[500px] rounded-3xl overflow-hidden border border-white/10 relative">
+                 <img src="https://images.unsplash.com/photo-1512690118294-704331273f1f?auto=format&fit=crop&q=80&w=1200" class="w-full h-full object-cover grayscale brightness-50" alt="[Foto interna da barbearia com luzes neon]">
+                 <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-neon text-4xl mb-4 animate-bounce"><i class="fas fa-location-dot"></i></div>
+                        <p class="font-display text-white text-xl uppercase tracking-widest">SETOR MARISTA</p>
                     </div>
-                </div>
-                
-                <!-- Mapa Placeholder -->
-                <div class="h-80 w-full img-placeholder rounded-lg bg-gray-800">
-                    <i class="fas fa-map-marked-alt text-4xl mb-3"></i>
-                    <p class="font-bold">INSERIR GOOGLE MAPS AQUI</p>
-                    <p class="text-xs px-8 text-center mt-2">Vá no Google Maps -> Compartilhar -> Incorporar um mapa -> Copie o HTML e cole aqui.</p>
-                </div>
+                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-8 border-t border-gray-900">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="text-gold font-display font-bold text-xl tracking-wider mb-4">LOGO DA BARBEARIA</div>
-            <p class="text-gray-600 text-sm">© 2024 Todos os direitos reservados.</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="text-gray-500 hover:text-gold"><i class="fab fa-instagram text-xl"></i></a>
-                <a href="#" class="text-gray-500 hover:text-gold"><i class="fab fa-facebook text-xl"></i></a>
+    <footer class="py-20 border-t border-white/5 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="font-display text-white text-3xl tracking-tighter mb-8">FS<span class="text-neon">.</span>BARBER</h2>
+            <div class="flex justify-center gap-10 mb-12 text-gray-400 text-xl">
+                <a href="#" class="hover:text-neon transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-neon transition-colors"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/5562991879022" class="hover:text-neon transition-colors"><i class="fab fa-whatsapp"></i></a>
             </div>
+            <p class="text-[10px] text-gray-700 uppercase tracking-[1em] mb-4">Crafting Style Since 2024</p>
+            <p class="text-[9px] text-gray-800 uppercase tracking-widest">Goiânia — GO | Brasil</p>
         </div>
     </footer>
-
-    <!-- Botão Flutuante do WhatsApp -->
-    <a href="https://wa.me/5562991879022?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
 
 </body>
 </html>
