@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbearia Deus é Fiel | Arte e Estilo Urbano</title>
-    
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 
@@ -31,18 +31,48 @@
             }
         }
     </script>
+
+    <style>
+        .text-glow {
+            text-shadow: 0 0 10px rgba(0, 255, 209, 0.5);
+        }
+        .bg-grid {
+            background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .freestyle-border {
+            border: 1px solid rgba(0, 255, 209, 0.2);
+            transition: all 0.4s ease;
+        }
+        .freestyle-border:hover {
+            border-color: #00FFD1;
+            box-shadow: 0 0 20px rgba(0, 255, 209, 0.1);
+        }
+    </style>
 </head>
 
 <body class="bg-darkest text-gray-200 font-sans antialiased bg-grid">
 
-<!-- NAV -->
+<!-- HEADER -->
 <nav class="fixed w-full z-50 bg-darkest/90 backdrop-blur-xl border-b border-white/5">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
         <a href="#" class="flex items-center gap-3">
-            <img src="/images/logobarbeariadeusefiel.jpg" alt="Logo Barbearia Deus é Fiel" class="h-12 w-auto">
-            <span class="font-display text-lg font-bold tracking-tighter text-white uppercase">Deus é Fiel<span class="text-neon">.</span></span>
+            <img src="/logo.png" alt="Logo Barbearia Deus é Fiel"
+                 class="h-12 w-auto object-contain">
+            <span class="font-display text-lg font-bold tracking-tighter text-white uppercase">
+                Deus é Fiel<span class="text-neon">.</span>
+            </span>
         </a>
-        <a href="https://wa.me/5562991879022" target="_blank" class="bg-neon text-darkest font-extrabold text-[10px] tracking-widest px-6 py-3 rounded-full uppercase">
+
+        <div class="hidden md:flex gap-8 text-[10px] uppercase font-bold tracking-[0.3em]">
+            <a href="#art" class="hover:text-neon">Arte</a>
+            <a href="#prices" class="hover:text-neon">Menu</a>
+            <a href="#location" class="hover:text-neon">Base</a>
+        </div>
+
+        <a href="https://wa.me/5562991879022" target="_blank"
+           class="bg-neon text-darkest font-extrabold text-[10px] px-6 py-3 rounded-full uppercase">
             Marcar horário
         </a>
     </div>
@@ -51,33 +81,46 @@
 <!-- HERO -->
 <section class="relative h-screen flex items-center justify-center pt-20">
     <div class="absolute inset-0 grayscale opacity-40">
-        <img src="/images/corte.jpg" class="w-full h-full object-cover">
+        <img src="https://images.unsplash.com/photo-1590540179852-211d6b45e631?auto=format&fit=crop&q=80&w=1920"
+             class="w-full h-full object-cover">
+    </div>
+
+    <div class="relative z-10 text-center px-6">
+        <h1 class="text-5xl md:text-8xl font-display font-bold text-white mb-6 uppercase">
+            Deus é Fiel<br>
+            <span class="text-neon italic text-4xl md:text-6xl">Estilo & Fé.</span>
+        </h1>
     </div>
 </section>
 
 <!-- GALERIA -->
 <section id="art" class="py-32 px-6 max-w-7xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div class="md:col-span-2 h-[500px] overflow-hidden rounded-3xl">
-            <img src="/images/corte1.jpg" class="w-full h-full object-cover">
+
+        <div class="md:col-span-2 h-[500px] overflow-hidden rounded-3xl freestyle-border">
+            <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=800"
+                 class="w-full h-full object-cover">
         </div>
-        <div class="h-[500px] overflow-hidden rounded-3xl">
-            <img src="/images/corte3.jpg" class="w-full h-full object-cover">
+
+        <div class="h-[500px] overflow-hidden rounded-3xl freestyle-border">
+            <img src="https://images.unsplash.com/photo-1599351431247-f10b21817021?auto=format&fit=crop&q=80&w=800"
+                 class="w-full h-full object-cover">
         </div>
-        <div class="h-[500px] overflow-hidden rounded-3xl">
-            <img src="/images/corte4.jpg" class="w-full h-full object-cover">
+
+        <div class="h-[500px] overflow-hidden rounded-3xl freestyle-border">
+            <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&q=80&w=800"
+                 class="w-full h-full object-cover">
         </div>
+
     </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="py-20 border-t border-white/5 text-center">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="mb-8 flex justify-center">
-            <img src="/images/logobarbeariadeusefiel.jpg" alt="Logo Barbearia Deus é Fiel" class="h-16 w-auto">
-        </div>
-        <p class="text-[10px] text-gray-700 uppercase tracking-[1em]">Estilo & Fé Since 2024</p>
-    </div>
+    <img src="/logo.png" class="h-16 w-auto mx-auto mb-6">
+    <p class="text-xs text-gray-600 uppercase tracking-widest">
+        Goiânia — GO | Brasil
+    </p>
 </footer>
 
 </body>
